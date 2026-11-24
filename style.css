@@ -1,9 +1,10 @@
 /* Design scheme matched to the original stachepad.com (Squarespace):
-   white + sand bands, black type, Calistoga headings, Familjen Grotesk body,
+   white + sand bands, black type, Anybody (wide, 700) headings, Familjen Grotesk body,
    square black buttons, sage + pale-yellow accents. */
 :root{
   --white:#ffffff; --sand:#ebe4d8; --ink:#000000; --muted:#5c5650; --line:#ddd3c3;
   --sage:#6f7d5f; --sun:#fddaa0;
+  --display:Anybody,system-ui,sans-serif;
   /* legacy names used by book.css */
   --paper:#ffffff; --pink:#000000; --pink-soft:#ebe4d8; --sea:#6f7d5f; --sea-soft:#e7eadf;
 }
@@ -13,10 +14,10 @@ body{margin:0;background:var(--white);color:var(--ink);font:19px/1.6 "Familjen G
 img{max-width:100%;display:block}
 a{color:var(--ink)}
 .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
-h1,h2,h3{font-family:Calistoga,Georgia,serif;font-weight:400;line-height:1.12;margin:0 0 .4em;letter-spacing:-.02em}
-h1{font-size:clamp(36px,5.4vw,58px)}
-h2{font-size:clamp(28px,3.6vw,40px)}
-h3{font-size:24px}
+h1,h2,h3{font-family:var(--display);font-weight:700;font-stretch:125%;line-height:1.15;margin:0 0 .4em;letter-spacing:-.01em}
+h1{font-size:clamp(31px,4.6vw,50px)}
+h2{font-size:clamp(24px,3.1vw,34px)}
+h3{font-size:21px}
 
 /* nav */
 .nav{position:sticky;top:0;z-index:10;background:var(--white);border-bottom:1px solid var(--line)}
@@ -54,7 +55,7 @@ h3{font-size:24px}
 @media (max-width:860px){.split{grid-template-columns:1fr}}
 details{border-top:1px solid var(--ink);padding:16px 0}
 details:last-of-type{border-bottom:1px solid var(--ink)}
-summary{cursor:pointer;font:400 24px/1.25 Calistoga,Georgia,serif;letter-spacing:-.02em;list-style:none;display:flex;justify-content:space-between;gap:12px}
+summary{cursor:pointer;font:700 21px/1.25 var(--display);font-stretch:125%;letter-spacing:-.01em;list-style:none;display:flex;justify-content:space-between;gap:12px}
 summary::after{content:"+";font:300 26px "Familjen Grotesk";}
 details[open] summary::after{content:"–"}
 summary::-webkit-details-marker{display:none}
@@ -70,7 +71,7 @@ details .body{padding-top:10px;max-width:640px}
 
 /* prose pages */
 .page{padding:44px 0 70px;max-width:780px}
-.page blockquote{font:400 24px/1.35 Calistoga,Georgia,serif;border-left:4px solid var(--sage);margin:22px 0;padding:4px 0 4px 18px}
+.page blockquote{font:700 21px/1.35 var(--display);font-stretch:125%;border-left:4px solid var(--sage);margin:22px 0;padding:4px 0 4px 18px}
 .page h2{margin-top:46px}
 .page h3{margin-top:30px}
 
